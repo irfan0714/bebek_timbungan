@@ -13,7 +13,6 @@ class Menu extends CI_Controller {
 	}
 
 	public function index() {
-		echo $this->input->get('tbl');
 		$KdTable = decrypt($this->input->get('tbl'));
 
 		$arrMenuAll = $this->menu_model->getMenu()->result_array();
