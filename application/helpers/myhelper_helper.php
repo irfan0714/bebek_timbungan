@@ -278,4 +278,5 @@ function child_menu($parent_id) {
 
 	return $result;
 }
+//TEST
 ?>
