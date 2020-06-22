@@ -578,7 +578,7 @@
                                 });
 
                                 $("#item-pesanan").html(item_pesanan);
-                                $("#QRCode2").html('<div class="col-lg-12"><img src="'+base_url+'assets/images/QRCodeOrder/'+res.QRCode2+'" style="width:300px;"></div>');
+                                $("#QRCode2").html('<div class="col-lg-12"><img src="'+base_url+'assets/images/QRCodeOrder/'+res.QRCode2+'" style="width:200px;"></div>');
                                 var btn_pesan = '<button  type="button"  class="btn btn-primary " style="width:100px;height:50px;" onclick="pesan()">PESAN</button>';
                                 $("#btn-pesanan").html(btn_pesan);
 
@@ -640,7 +640,7 @@
                                 });
 
                                 $("#fix-pesanan").html(item_pesanan);
-                                $("#QRCode1").html('<div class="col-lg-12"><img src="'+base_url+'assets/images/QRCodeOrder/'+res.QRCode1+'"  style="width:300px;"></div>');
+                                $("#QRCode1").html('<div class="col-lg-12"><img src="'+base_url+'assets/images/QRCodeOrder/'+res.QRCode1+'"  style="width:200px;"></div>');
                                 $("#nama-kustomer").html(res.data[0].NamaCustomer);
                                 $("#NamaKustomer").val(res.data[0].NamaCustomer);
                                 $("#lable-tambahan-item").html('<div class="col-lg-6"><h6>ITEM TAMBAHAN</H6></div>');
