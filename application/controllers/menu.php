@@ -102,6 +102,16 @@ class Menu extends CI_Controller {
 			$namafile2 = $ArrPesanan[0]['IdOrder'] . "-2";
 			$QCodeNameFile2 = $this->generateQRCode($dataQRCode, $namafile2);
 			$this->db->update('order_temp', array('QRCOde2' => $QCodeNameFile2), array('IdOrder' => $ArrPesanan[0]['IdOrder']));
+
+		} else {
+			// hapus barcode
+			$arrOrderHeader = $this->db->get_where('order_temp', array('KdTable' => $KdTable, 'Status' => '0'))->row();
+			$QRCode2 = $arrOrderHeader->QRCode2;
+			if (!empty($QRCode2)) {
+				if (unlink('assets/images/QRCodeOrder/' . $QRCode2)) {
+					$this->db->update('order_temp', array('QRCode2' => ''), array('KdTable' => $KdTable, 'Status' => '0'));
+				}
+			}
 		}
 
 		echo json_encode(array('message' => 'success', 'QRCode2' => $QCodeNameFile2, 'totalQtyOrder' => $totalQtyOrder, 'data' => $ArrPesanan));

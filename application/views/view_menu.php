@@ -584,6 +584,7 @@
 
                             }else{
                                 $("#item-pesanan").html('<div class="col-lg-6">Empty.</div>');
+                                $("#QRCode2").html('');
                             }
 
                         }else{
@@ -646,6 +647,7 @@
                                 $("#lable-tambahan-item").html('<div class="col-lg-6"><h6>ITEM TAMBAHAN</H6></div>');
                             }else{
                                 $("#fix-pesanan").html('');
+                                $("#QRCode1").html('');
                             }
 
                         }else{
